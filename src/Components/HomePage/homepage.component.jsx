@@ -1,33 +1,29 @@
-import React, { useContext, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { UserContext } from "../../Contexts/loggedInContext";
-import { auth } from "../../firebase/firebase.js";
-import { signOut } from "firebase/auth";
+import Navbar, { SidebarItem } from "../Navbar/navbar.component";
+import { LayoutDashboard, Home, Plus, LogOut } from "lucide-react";
+import { handleLogout } from "../Navbar/navbar.component";
 
 const HomePage = () => {
-  const currentUser = useContext(UserContext);
-  const navigate = useNavigate();
-
-  const handleLogout = async () => {
-    try {
-      await signOut(auth);
-      console.log("User signed out!");
-    } catch (error) {
-      console.error("Error signing out: ", error);
-    }
-  };
-
-  useEffect(() => {
-    if (!currentUser) {
-      navigate("/");
-    }
-  }, [currentUser, navigate]);
-
   return (
-    <div>
-      <h1>Home Page</h1>
-      <button onClick={handleLogout}>Disconnect Account</button>
-    </div>
+    <>
+      <div className="flex">
+        {/* Sidebar Navigation*/}
+        <Navbar>
+          <SidebarItem icon={<Home size={20} />} text="Home" />
+          <SidebarItem
+            icon={<LayoutDashboard size={20} />}
+            text="Dashboard"
+            active
+          />
+          <SidebarItem icon={<Plus size={20} />} text="Add New" />
+          <hr className="my-2" />
+          <button onClick={handleLogout}>
+            <SidebarItem icon={<LogOut size={20} />} text="Log Out" />
+          </button>
+        </Navbar>
+        {/* Sfarsitul navbarului*/}
+        {/* Main Content*/}
+      </div>
+    </>
   );
 };
 
