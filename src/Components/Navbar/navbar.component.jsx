@@ -6,6 +6,7 @@ import { UserContext } from "../../Contexts/loggedInContext";
 import { auth } from "../../firebase/firebase.js";
 import logo from "../../assets/logo.png";
 import profile from "../../assets/profile.png";
+
 const SidebarContext = createContext();
 
 const Navbar = ({ children }) => {

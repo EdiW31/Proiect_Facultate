@@ -1,12 +1,14 @@
+//import de componente si librarii
 import Navbar, { SidebarItem } from "../Navbar/navbar.component";
 import ProgressCard from "../ProgressBarCard/progresscard.component";
+import CurrencyConverter from "../CurrencySwap/currencyswap.component";
+
 import { Home, Plus, LogOut } from "lucide-react";
 import { handleLogout } from "../Navbar/navbar.component";
 import { useState, useEffect, useContext } from "react";
 import { onValue, ref, set } from "firebase/database";
 import { db } from "../../firebase/firebase";
 import { UserContext } from "../../Contexts/loggedInContext";
-import CurrencyConverter from "../CurrencySwap/currencyswap.component";
 
 const HomePage = () => {
   const [selectedCard, setSelectedCard] = useState(0);

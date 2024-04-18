@@ -44,6 +44,7 @@ const ProgressCard = (props) => {
       money: newMoney,
     };
 
+    // adaugam in database suma noua de bani
     set(cardRef, cardData)
       .then(() => {
         // daca se adauga cu succes bani in card se updateaza suma
