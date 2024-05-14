@@ -2,6 +2,7 @@
 import Navbar, { SidebarItem } from "../Navbar/navbar.component";
 import ProgressCard from "../ProgressBarCard/progresscard.component";
 import CurrencyConverter from "../CurrencySwap/currencyswap.component";
+import MoneyChart from "../MoneyChart/moneychart.component";
 
 import { Home, Plus, LogOut } from "lucide-react";
 import { handleLogout } from "../Navbar/navbar.component";
@@ -130,8 +131,10 @@ const HomePage = () => {
               </div>
             ))}
           </div>
-          <div className="container flex flex-col lg:flex-row justify-center items-center my-7 mx-4 md:mx-6 lg:mx-9">
+          <div className="container lg:mx-9 flex flex-col lg:flex-row gap-4">
+            <MoneyChart cards={cards} />
             <CurrencyConverter />
+            <MoneyChart cards={cards} />
           </div>
         </div>
       </div>
