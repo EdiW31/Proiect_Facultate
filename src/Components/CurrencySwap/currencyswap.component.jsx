@@ -73,12 +73,11 @@ const CurrencyConverter = () => {
 
   return (
     <div>
-      <div className="w-full h-4 bg-emerald-200 rounded-t-lg"></div>
-      <div className="max-w-lg p-10 bg-white rounded-lg shadow-lg">
+      <div className="w-auto h-4 bg-emerald-200 rounded-t-lg"></div>
+      <div className="w-full p-12 bg-white rounded-lg shadow-md">
         <h2 className="mb-5 text-2xl font-semibold text-gray-700">
           Currency Converter
         </h2>
-
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 items-end">
           <CurrencyDropdown
             favorites={favorites}
@@ -106,7 +105,6 @@ const CurrencyConverter = () => {
             handleFavorite={handleFavorite}
           />
         </div>
-
         <div className="mt-4">
           <label
             htmlFor="amount"
@@ -121,7 +119,6 @@ const CurrencyConverter = () => {
             className="w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 mt-1"
           />
         </div>
-
         <div className="flex justify-end mt-6">
           <button
             onClick={convertCurrency}
@@ -131,12 +128,9 @@ const CurrencyConverter = () => {
             Convert
           </button>
         </div>
-
-        {convertedAmount && (
-          <div className="mt-4 text-lg font-medium text-right text-green-600">
-            Converted Amount: {convertedAmount}
-          </div>
-        )}
+        <div className="mt-4 text-lg font-medium text-right text-green-600">
+          Converted Amount: {convertedAmount}
+        </div>
       </div>
     </div>
   );

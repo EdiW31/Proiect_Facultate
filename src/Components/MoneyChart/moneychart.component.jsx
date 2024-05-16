@@ -100,7 +100,7 @@ const chartConfig = {
   },
 };
 
-export default function Example() {
+const ChartNormal = ({ title, description }) => {
   const colors = [bg1, bg2, bg3, bg4, bg5]; // array cu backgroundImage pentru card
   const bgImage = colors[Math.floor(Math.random() * colors.length)];
   return (
@@ -113,19 +113,19 @@ export default function Example() {
         floated={false}
         shadow={false}
         color="transparent"
-        className="flex flex-col gap-4 rounded-none md:flex-row md:items-center"
+        className="flex flex-col gap-4 rounded-none md:flex-row md:items-center px-4"
       >
-        <div className="w-max rounded-lg bg-gray-900 p-5 text-white">sa</div>
+        <div className="w-max rounded-lg bg-gray-900 p-5 text-white">1</div>
         <div>
           <Typography variant="h6" color="blue-gray">
-            Live Chart
+            {title ? title : <span className="text-gray-400">No title</span>}
           </Typography>
           <Typography
             variant="small"
             color="gray"
             className="max-w-sm font-normal"
           >
-            Here you can check the last years money evolution.
+            {description}
           </Typography>
         </div>
       </CardHeader>
@@ -134,4 +134,5 @@ export default function Example() {
       </CardBody>
     </Card>
   );
-}
+};
+export default ChartNormal;

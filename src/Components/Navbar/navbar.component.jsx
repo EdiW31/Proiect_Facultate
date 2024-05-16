@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { ChevronFirst, ChevronLast, MoreVertical } from "lucide-react";
+import { MoreVertical } from "lucide-react";
 import { useContext, useEffect, createContext, useState } from "react";
 import { signOut } from "firebase/auth";
 import { UserContext } from "../../Contexts/loggedInContext";
@@ -22,7 +22,9 @@ const Navbar = ({ children }) => {
 
   return (
     <>
-      <aside className="h-screen z-50">
+      <aside
+        className={`h-screen z-50 ${expanded ? "block" : "hidden"} lg:flex`}
+      >
         <nav className="h-full flex flex-col bg-white border-r shadow-sm">
           <div className="p-4 pb-2 flex justify-between items-center">
             <img
@@ -33,12 +35,6 @@ const Navbar = ({ children }) => {
               alt="logo"
             />
             {/*Aici daca apas pe buton face setExpanded pe opus, adica daca e true face false si invers*/}
-            <button
-              onClick={() => setExpanded((curr) => !curr)}
-              className="p-1.5 rounded-lg bg-gray-50 hover:bg-gray-100"
-            >
-              {expanded ? <ChevronFirst /> : <ChevronLast />}
-            </button>
           </div>
 
           <SidebarContext.Provider value={{ expanded }}>
