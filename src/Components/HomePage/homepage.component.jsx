@@ -9,7 +9,7 @@ import Typewriter from "../Mini-Components/hello.component";
 import { Home, Plus, LogOut } from "lucide-react";
 import { handleLogout } from "../Navbar/navbar.component";
 import { useState, useEffect, useContext } from "react";
-import { onValue, ref, remove, set } from "firebase/database";
+import { onValue, ref, set } from "firebase/database";
 import { db } from "../../firebase/firebase";
 import { UserContext } from "../../Contexts/loggedInContext";
 
@@ -129,7 +129,7 @@ const HomePage = () => {
 
         <div className="flex w-full flex-col align-items-center justify-items-centers">
           {currentUser ? (
-            <Typewriter words={[`Welcome ${currentUser.email}!`]} />
+            <Typewriter words={[`Welcome, ${currentUser.email}!`]} />
           ) : (
             <Typewriter words={["Welcome"]} />
           )}
@@ -185,7 +185,7 @@ const HomePage = () => {
               deletedCards={removedCards}
             />
           </div>
-          <div className="grid w-auto my-2 lg:my-0 mx-4 lg:mx-9 h-4 bg-gradient-to-r from-emerald-300 via-indigo-200 via-pink-200 to-blue-200 rounded-lg"></div>
+          <div className="grid w-auto my-2 lg:my-0 mx-4 lg:mx-9 h-4 bg-gradient-to-r from-emerald-300 via-yellow-200 via-pink-200 to-blue-200 rounded-lg"></div>
         </div>
       </div>
     </>

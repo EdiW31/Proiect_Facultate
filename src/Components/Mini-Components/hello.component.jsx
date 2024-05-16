@@ -25,7 +25,7 @@ const Typewriter = ({ words }) => {
           setIsDeleting(false);
         }
       }
-    }, 200); // adjust timing here
+    }, 30); // adjust timing here
 
     return () => clearTimeout(timer); // clean up on unmount
   }, [i, j, isDeleting, words]);

@@ -76,7 +76,7 @@ const CurrencyConverter = () => {
       <div className="w-auto h-4 bg-emerald-200 rounded-t-lg"></div>
       <div className="w-full p-12 bg-white rounded-lg shadow-md">
         <h2 className="mb-5 text-2xl font-semibold text-gray-700">
-          Currency Converter
+          Convert your money here! 🤑
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 items-end">
           <CurrencyDropdown
