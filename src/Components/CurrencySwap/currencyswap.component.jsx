@@ -2,6 +2,12 @@ import CurrencyDropdown from "./dropdown.component";
 import { useEffect, useState } from "react";
 import { HiArrowsRightLeft } from "react-icons/hi2";
 
+import bg1 from "../../assets/Background Card Images/IMG_3328.jpg";
+import bg2 from "../../assets/Background Card Images/IMG_3327.jpg";
+import bg3 from "../../assets/Background Card Images/IMG_3329.jpg";
+import bg4 from "../../assets/Background Card Images/IMG_3330.jpg";
+import bg5 from "../../assets/Background Card Images/IMG_3332.jpg";
+
 const CurrencyConverter = () => {
   const [currencies, setCurrencies] = useState([]);
   const [amount, setAmount] = useState(1);
@@ -12,6 +18,8 @@ const CurrencyConverter = () => {
   const [favorites, setFavorites] = useState(
     JSON.parse(localStorage.getItem("favorites")) || ["INR", "EUR"]
   );
+  const colors = [bg1, bg2, bg3, bg4, bg5]; // array cu backgroundImage pentru card
+  const bgImage = colors[Math.floor(Math.random() * colors.length)];
 
   // Currencies -> https://api.frankfurter.app/currencies
   // facem Fetch la monede
@@ -73,7 +81,10 @@ const CurrencyConverter = () => {
 
   return (
     <div>
-      <div className="w-auto h-4 bg-emerald-200 rounded-t-lg"></div>
+      <div
+        className="w-auto h-4 rounded-t-lg bg-cover"
+        style={{ backgroundImage: `url(${bgImage})` }}
+      ></div>
       <div className="w-full p-12 bg-white rounded-lg shadow-md">
         <h2 className="mb-5 text-2xl font-semibold text-gray-700">
           Convert your money here! 🤑

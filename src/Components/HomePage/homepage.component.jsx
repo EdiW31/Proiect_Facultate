@@ -104,15 +104,15 @@ const HomePage = () => {
   //returnam componentul
   return (
     <>
-      <div className="flex bg-slate-50">
+      <div className="flex bg-slate-50 ">
         {/* Sidebar Navigation care este sticky*/}
         <div className="sticky top-0 z-50">
           <Navbar>
-            <SidebarItem icon={<Home size={20} />} text="Home" />
+            <SidebarItem icon={<Home size={20} />} text={"Home"} />
             <button onClick={handleClick}>
               <SidebarItem
                 icon={<Plus size={20} />}
-                text="Add New Card"
+                text={"Add New Card"}
                 active
               />
             </button>
@@ -120,7 +120,7 @@ const HomePage = () => {
             <hr className="my-2" />
             {/* Logout button */}
             <button onClick={handleLogout}>
-              <SidebarItem icon={<LogOut size={20} />} text="Log Out" />
+              <SidebarItem icon={<LogOut size={20} />} text={"Log Out"} />
             </button>
           </Navbar>
         </div>
@@ -170,14 +170,14 @@ const HomePage = () => {
           <div className="container grid lg:mx-9 lg:my-6  grid-cols-1 lg:grid-cols-3 gap-4 align-items-center justify-items-center">
             <MoneyChart
               cards={cards}
-              title="Istoric Cards Create/Sterse"
+              title="US Dollar that were created each month of the year"
               description={
-                "Here you can see as a PieChart how many cards you created v how many you deleted."
+                "Here you can check out how many dollars were created in each month of the year during the pandemic."
               }
             />
             <CurrencyConverter />
             <PieChart
-              title="Istoric Cards Create/Sterse"
+              title="Cards created v Cards deleted"
               description={
                 "Here you can see as a PieChart how many cards you created v how many you deleted."
               }
