@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { MoreVertical } from "lucide-react";
-import { useContext, useEffect, createContext, useState } from "react";
+import { useContext, useEffect, createContext } from "react";
 import { signOut } from "firebase/auth";
 import { UserContext } from "../../Contexts/loggedInContext";
 import { auth } from "../../firebase/firebase.js";
