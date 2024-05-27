@@ -11,7 +11,7 @@ const SidebarContext = createContext();
 
 const Navbar = ({ children }) => {
   const currentUser = useContext(UserContext);
-  const [expanded, setExpanded] = useState(false);
+  const expanded = false;
   const navigate = useNavigate();
   useEffect(() => {
     if (!currentUser) {
