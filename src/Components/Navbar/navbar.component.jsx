@@ -11,15 +11,13 @@ const SidebarContext = createContext();
 
 const Navbar = ({ children }) => {
   const currentUser = useContext(UserContext);
-  const navigate = useNavigate();
   const [expanded, setExpanded] = useState(false);
-
+  const navigate = useNavigate();
   useEffect(() => {
     if (!currentUser) {
       navigate("/");
     }
   }, [currentUser, navigate]);
-
   return (
     <>
       <aside
