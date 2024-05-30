@@ -205,15 +205,17 @@ function LoginPage() {
                 >
                   Reset Password
                 </p>
-                <p>
-                  <a href="www.csac.ro">CSAC</a>
-                </p>
-                <p>
-                  <a href="https://scanstart.ro/">ScanStat</a>
-                </p>
-                <p>
-                  <a href=" https://graffino.com/">Graffino</a>
-                </p>
+                <div className="flex justify-around ">
+                  <p>
+                    <a href="www.csac.ro">CSAC</a>
+                  </p>
+                  <p>
+                    <a href="https://scanstart.ro/">ScanStat</a>
+                  </p>
+                  <p>
+                    <a href=" https://graffino.com/">Graffino</a>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
