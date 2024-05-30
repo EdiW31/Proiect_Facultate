@@ -127,7 +127,7 @@ const HomePage = () => {
         {/* Sfarsitul navbarului*/}
         {/* Main Content*/}
 
-        <div className="flex w-full flex-col align-items-center justify-items-centers">
+        <div className="flex w-full flex-col align-items-center justify-items-centers mt-4">
           {currentUser ? (
             <Typewriter words={[`Welcome, ${currentUser.email}!`]} />
           ) : (
