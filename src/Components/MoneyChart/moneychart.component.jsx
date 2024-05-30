@@ -5,6 +5,7 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import Chart from "react-apexcharts";
+
 import bg1 from "../../assets/Background Card Images/IMG_3328.jpg";
 import bg2 from "../../assets/Background Card Images/IMG_3327.jpg";
 import bg3 from "../../assets/Background Card Images/IMG_3329.jpg";

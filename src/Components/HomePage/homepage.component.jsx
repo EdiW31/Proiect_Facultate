@@ -122,6 +122,15 @@ const HomePage = () => {
             <button onClick={handleLogout}>
               <SidebarItem icon={<LogOut size={20} />} text={"Log Out"} />
             </button>
+            <button>
+              <a href="www.csac.ro">CSAC</a>
+            </button>
+            <button>
+              <a href="https://scanstart.ro/">ScanStat</a>
+            </button>
+            <button>
+              <a href=" https://graffino.com/">Graffino</a>
+            </button>
           </Navbar>
         </div>
         {/* Sfarsitul navbarului*/}
